@@ -3,7 +3,8 @@
 This jQuery Plugin provides an easy way to create an overview of all scheduled jobs of a
 [ManifoldCF](https://manifoldcf.apache.org/en_US/index.html) using the already existing [simpleTime jQuery Plugin](https://github.com/eScienceCenter/simpleTimeline) from [eScience-Center](https://github.com/eScienceCenter).
 
-The ManifoldCF UI does not provide an aggregated view of all jobs configured. - For this you have to select each job an check the scheduling tab: <img src="screenshots/screenshot-manifoldcf-ui.png" alt="ManifoldCF UI" width="600">
+The ManifoldCF UI does not provide an aggregated view of all jobs configured. - For this you have to select each job an check the scheduling tab: 
+<img src="screenshots/screenshot-manifoldcf-ui.png" alt="ManifoldCF UI" width="600">
 
 The ManifoldCF Jobs Timeline fills this gap using the [servlet-based JSON API](https://manifoldcf.apache.org/release/release-2.5/en_US/programmatic-operation.html), which is available under ```/mcf-api-service/json/``` on default installation, and making it possible to integrate the job overview whereever you want:
 <img src="screenshots/screenshot-manifoldcf-timeline.png" alt="manifoldcf timeline" width="600">
@@ -46,7 +47,7 @@ You need to adjust the CORS headers of your ManifoldCF json api (provided by the
 ```
 Set the ```baseUrl``` pointing to your ManifoldCF server.
 
-See (example.html) for a working example using static json-data.
+See [example.html](example.html) for a working example using static json-data.
 
 
 
@@ -64,4 +65,4 @@ See (example.html) for a working example using static json-data.
 
 
 ## License
-ManifoldCF Jobs Timeline Plugin is released under the MIT license. See (LICENSE) for details.
+ManifoldCF Jobs Timeline Plugin is released under the MIT license. See [LICENSE](LICENSE) for details.
