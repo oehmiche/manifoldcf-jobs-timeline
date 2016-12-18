@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/simpleTimeline.css" />
+		
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="js/resize.js"></script>
+		<script src="js/simpleTimeline.js"></script>
+		<script src="js/manifoldcfJobsTimeline.js"></script>
+		
+		<style>
+			#timeline {
+				position: relative;
+				margin-top: 20px;
+				max-width: 100%;
+				overflow-x: auto;
+				overflow-y: hidden;
+				border: 1px solid dimgray;
+				box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75);
+			}
+		</style>
+	</head>
+	<body>		
+		<div id="timeline"></div>
+		
+		<script>
+			$(document).ready(function() {
+				var options = {
+					baseUrl: "https://github.com/oehmiche/manifoldcf-jobs-timeline",
+					jobsEndpoint : "/mcf-api-service/data/jobs.json"
+				};
+				$('#timeline').manifoldCfJobsTimeline(options);
+			});
+		</script>
+	</body>
+</html>
