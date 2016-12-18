@@ -54,10 +54,10 @@ See [example.html](example.html) for a working example using static json-data.
 
 ## Features
 * generates an overview of all jobs
-* consider 
-* jobs without duration get a default length and will be marked dotted
+* considers jobs schedules crossing midnight
+* jobs without duration get a default length and will be marked special (border in dotted style)
 * provides job detail on click
-* direct linking to the jobs detail page
+* direct linking to the manifoldcf job's detail page 
 
 ## Open Issues
 * no support for weekday/date specific job schedules
