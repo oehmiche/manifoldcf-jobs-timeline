@@ -1,5 +1,5 @@
 /*
-	jQuery manifoldCfJobsTimeline plugin v0.1
+	jQuery manifoldCfJobsTimeline plugin v0.11
 	
 	Licensed under the MIT License
 	https://opensource.org/licenses/MIT
@@ -102,7 +102,8 @@
 		};
 		
 		function printTime(hour, minutes) {
-			return hour.value + ":" + (minutes.value.length == 1 ? '0' : '') + minutes.value;
+			var minutesVal = (minutes ? minutes.value : '0');
+			return hour.value + ":" + (minutesVal.length == 1 ? '0' : '') + minutesVal;
 		};
 		
 		function printDurationInMinutes(duration) {
@@ -110,7 +111,8 @@
 		};
 		
 		function starttime(schedule) {
-			return parseInt(schedule.hourofday.value) + (parseInt(schedule.minutesofhour.value) / 60);
+			return parseInt(schedule.hourofday.value) +
+				(schedule.minutesofhour ? (parseInt(schedule.minutesofhour.value) / 60) : 0);
 		};
 		
 		function endtime(starttime, schedule) {
