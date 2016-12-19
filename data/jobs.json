@@ -1,1 +1,199 @@
-{"job":[{"id":"1481934284626","description":"Intranet","repository_connection":"Eins","document_specification":{"startpoint":{"_value_":"","_attribute_path":"/tmp","_attribute_converttouri":"false","include":[{"_value_":"","_attribute_match":"*.txt","_attribute_type":"file"},{"_value_":"","_attribute_match":"*","_attribute_type":"file"}]}},"pipelinestage":{"stage_id":"0","stage_isoutput":"true","stage_connectionname":"null","stage_specification":{}},"start_mode":"schedule window start","run_mode":"scan once","hopcount_mode":"accurate","priority":"5","recrawl_interval":"86400000","expiration_interval":"infinite","reseed_interval":"3600000","schedule":{"requestminimum":"false","duration":"14400000","hourofday":{"value":"22"},"minutesofhour":{"value":"15"}}},{"id":"1481930041331","description":"Webcrawler","repository_connection":"Eins","document_specification":{"startpoint":{"_value_":"","_attribute_path":"/tmp","_attribute_converttouri":"false","include":[{"_value_":"","_attribute_match":"*.txt","_attribute_type":"file"},{"_value_":"","_attribute_match":"*","_attribute_type":"file"}]}},"pipelinestage":{"stage_id":"0","stage_isoutput":"true","stage_connectionname":"null","stage_specification":{}},"start_mode":"schedule window start","run_mode":"scan once","hopcount_mode":"accurate","priority":"5","recrawl_interval":"86400000","expiration_interval":"infinite","reseed_interval":"3600000","schedule":{"requestminimum":"false","duration":"8400000","hourofday":{"value":"5"},"minutesofhour":{"value":"10"}}},{"id":"1481918824979","description":"Wiki","repository_connection":"Eins","document_specification":{"startpoint":{"_value_":"","_attribute_path":"/tmp","_attribute_converttouri":"false","include":[{"_value_":"","_attribute_match":"*.txt","_attribute_type":"file"},{"_value_":"","_attribute_match":"*","_attribute_type":"file"}]}},"pipelinestage":{"stage_id":"0","stage_isoutput":"true","stage_connectionname":"null","stage_specification":{}},"start_mode":"schedule window start","run_mode":"scan once","hopcount_mode":"accurate","priority":"5","recrawl_interval":"86400000","expiration_interval":"infinite","reseed_interval":"3600000","schedule":[{"requestminimum":"false","duration":"7200000","hourofday":{"value":"1"},"minutesofhour":{"value":"0"}},{"requestminimum":"false","duration":"13800000","monthofyear":{"value":"1"},"hourofday":{"value":"12"},"minutesofhour":{"value":"9"}},{"requestminimum":"false","hourofday":{"value":"6"},"minutesofhour":{"value":"10"}}]}]}
+{
+	"job": [{
+		"id": "1481934284626",
+		"description": "Intranet",
+		"repository_connection": "Solr",
+		"document_specification": {
+			"startpoint": {
+				"_value_": "",
+				"_attribute_path": "/tmp",
+				"_attribute_converttouri": "false",
+				"include": [{
+					"_value_": "",
+					"_attribute_match": "*.txt",
+					"_attribute_type": "file"
+				},
+				{
+					"_value_": "",
+					"_attribute_match": "*",
+					"_attribute_type": "file"
+				}]
+			}
+		},
+		"pipelinestage": {
+			"stage_id": "0",
+			"stage_isoutput": "true",
+			"stage_connectionname": "null",
+			"stage_specification": {
+				
+			}
+		},
+		"start_mode": "schedule window start",
+		"run_mode": "scan once",
+		"hopcount_mode": "accurate",
+		"priority": "5",
+		"recrawl_interval": "86400000",
+		"expiration_interval": "infinite",
+		"reseed_interval": "3600000",
+		"schedule": {
+			"requestminimum": "false",
+			"duration": "14400000",
+			"hourofday": {
+				"value": "22"
+			},
+			"minutesofhour": {
+				"value": "15"
+			}
+		}
+	},
+	{
+		"id": "1481934284662",
+		"description": "Intranet without Schedule",
+		"repository_connection": "Solr",
+		"document_specification": {
+			"startpoint": {
+				"_value_": "",
+				"_attribute_path": "/tmp",
+				"_attribute_converttouri": "false",
+				"include": [{
+					"_value_": "",
+					"_attribute_match": "*.txt",
+					"_attribute_type": "file"
+				},
+				{
+					"_value_": "",
+					"_attribute_match": "*",
+					"_attribute_type": "file"
+				}]
+			}
+		},
+		"pipelinestage": {
+			"stage_id": "0",
+			"stage_isoutput": "true",
+			"stage_connectionname": "null",
+			"stage_specification": {
+				
+			}
+		},
+		"start_mode": "schedule window start",
+		"run_mode": "scan once",
+		"hopcount_mode": "accurate",
+		"priority": "5",
+		"recrawl_interval": "86400000",
+		"expiration_interval": "infinite",
+		"reseed_interval": "3600000"
+	},
+	{
+		"id": "1481930041331",
+		"description": "Webcrawler",
+		"repository_connection": "Solr",
+		"document_specification": {
+			"startpoint": {
+				"_value_": "",
+				"_attribute_path": "/tmp",
+				"_attribute_converttouri": "false",
+				"include": [{
+					"_value_": "",
+					"_attribute_match": "*.txt",
+					"_attribute_type": "file"
+				},
+				{
+					"_value_": "",
+					"_attribute_match": "*",
+					"_attribute_type": "file"
+				}]
+			}
+		},
+		"pipelinestage": {
+			"stage_id": "0",
+			"stage_isoutput": "true",
+			"stage_connectionname": "null",
+			"stage_specification": {
+				
+			}
+		},
+		"start_mode": "schedule window start",
+		"run_mode": "scan once",
+		"hopcount_mode": "accurate",
+		"priority": "5",
+		"recrawl_interval": "86400000",
+		"expiration_interval": "infinite",
+		"reseed_interval": "3600000",
+		"schedule": {
+			"requestminimum": "false",
+			"duration": "8400000",
+			"hourofday": {
+				"value": "5"
+			}
+		}
+	},
+	{
+		"id": "1481918824979",
+		"description": "Wiki",
+		"repository_connection": "Solr",
+		"document_specification": {
+			"startpoint": {
+				"_value_": "",
+				"_attribute_path": "/tmp",
+				"_attribute_converttouri": "false",
+				"include": [{
+					"_value_": "",
+					"_attribute_match": "*.txt",
+					"_attribute_type": "file"
+				},
+				{
+					"_value_": "",
+					"_attribute_match": "*",
+					"_attribute_type": "file"
+				}]
+			}
+		},
+		"pipelinestage": {
+			"stage_id": "0",
+			"stage_isoutput": "true",
+			"stage_connectionname": "null",
+			"stage_specification": {
+				
+			}
+		},
+		"start_mode": "schedule window start",
+		"run_mode": "scan once",
+		"hopcount_mode": "accurate",
+		"priority": "5",
+		"recrawl_interval": "86400000",
+		"expiration_interval": "infinite",
+		"reseed_interval": "3600000",
+		"schedule": [{
+			"requestminimum": "false",
+			"duration": "7200000",
+			"hourofday": {
+				"value": "1"
+			},
+			"minutesofhour": {
+				"value": "0"
+			}
+		},
+		{
+			"requestminimum": "false",
+			"duration": "13800000",
+			"monthofyear": {
+				"value": "1"
+			},
+			"hourofday": {
+				"value": "12"
+			},
+			"minutesofhour": {
+				"value": "9"
+			}
+		},
+		{
+			"requestminimum": "false",
+			"hourofday": {
+				"value": "6"
+			},
+			"minutesofhour": {
+				"value": "10"
+			}
+		}]
+	}]
+}

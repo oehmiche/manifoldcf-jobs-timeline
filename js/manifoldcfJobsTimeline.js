@@ -38,6 +38,12 @@
 			$.each(jobs.job, function(index, job){
 				var oneJob = [];
 				var schedules = [];
+				
+				if(!('schedule' in job)) {
+					// no schedules found => skip to next job
+					return true;
+				}
+				
 				// if there more than one schedule configured, we get an array
 				if(job.schedule instanceof Array) {
 					schedules = job.schedule;
@@ -46,19 +52,17 @@
 				}
 				$.each(schedules, function(index, schedule){
 					// there is not always a schedule given
-					if(schedule) {
-						var start = starttime(schedule);
-						var end = endtime(start, schedule);
-						// use different style for jobs schedules without duration
-						var noDuration = (schedule.duration) ? false: true;
+					var start = starttime(schedule);
+					var end = endtime(start, schedule);
+					// use different style for jobs schedules without duration
+					var noDuration = (schedule.duration) ? false: true;
 
-						// split a job schedule if it crosses midnight
-						if(end <= 24) {
-							oneJob.push(createJobEntry(index, job, schedule, start, end, noDuration));
-						} else {
-							oneJob.push(createJobEntry(index, job, schedule, start, 24, noDuration));
-							oneJob.push(createJobEntry(index, job, schedule, 0, end - 24, noDuration));
-						}
+					// split a job schedule if it crosses midnight
+					if(end <= 24) {
+						oneJob.push(createJobEntry(index, job, schedule, start, end, noDuration));
+					} else {
+						oneJob.push(createJobEntry(index, job, schedule, start, 24, noDuration));
+						oneJob.push(createJobEntry(index, job, schedule, 0, end - 24, noDuration));
 					}
 					oneJob.sort(sortByStartTime);
 				})
@@ -103,7 +107,8 @@
 		
 		function printTime(hour, minutes) {
 			var minutesVal = (minutes ? minutes.value : '0');
-			return hour.value + ":" + (minutesVal.length == 1 ? '0' : '') + minutesVal;
+			var hourVal = (hour ? hour.value : '0');
+			return hourVal + ":" + (minutesVal.length == 1 ? '0' : '') + minutesVal;
 		};
 		
 		function printDurationInMinutes(duration) {
@@ -111,7 +116,7 @@
 		};
 		
 		function starttime(schedule) {
-			return parseInt(schedule.hourofday.value) +
+			return (schedule.hourofday ? parseInt(schedule.hourofday.value) : 0) +
 				(schedule.minutesofhour ? (parseInt(schedule.minutesofhour.value) / 60) : 0);
 		};
 		
