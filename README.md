@@ -3,7 +3,7 @@
 This jQuery Plugin provides an easy way to create an overview of all scheduled jobs of a
 [ManifoldCF](https://manifoldcf.apache.org/en_US/index.html) using the already existing [simpleTime jQuery Plugin](https://github.com/eScienceCenter/simpleTimeline) from [eScience-Center](https://github.com/eScienceCenter).
 
-The ManifoldCF UI does not provide an aggregated view of all jobs configured. - For this you have to select each job an check the scheduling tab: 
+The ManifoldCF UI does not provide an aggregated view of all jobs configured. - For this you have to select each job and check the scheduling tab: 
 
 <img src="screenshots/screenshot-manifoldcf-ui.png" alt="ManifoldCF UI" width="600">
 
@@ -48,7 +48,7 @@ You need to adjust the CORS headers of your ManifoldCF json api (provided by the
 ```
 Set the ```baseUrl``` pointing to your ManifoldCF server.
 
-See [example.html](example.html) for a working example using static json-data.
+See [example.html](https://oehmiche.github.io/manifoldcf-jobs-timeline/example.html) for a working example using static json-data.
 
 
 
