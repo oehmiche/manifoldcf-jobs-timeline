@@ -129,7 +129,7 @@
 	},
 	{
 		"id": "1481918824979",
-		"description": "Wiki",
+		"description": "Wiki with an extra long name",
 		"repository_connection": "Solr",
 		"document_specification": {
 			"startpoint": {
