@@ -20,10 +20,17 @@
 
 .timeline-bar {
 	position: absolute;
-	text-align: center;	
+	text-align: center;
+	white-space: nowrap;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
 	border-style: solid;
 	cursor: pointer;
 	border-radius: 7px;	
+}
+.timeline-bar:hover{
+    overflow: visible; 
 }
 
 #timeline-collapse {	
